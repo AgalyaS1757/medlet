@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablet Details Finder</title>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Tablet Details Finder</h1>
+            <div class="user-section">
+                <span>Welcome, </span>
+                <span id="usernameDisplay">Guest</span>
+                <button id="logoutBtn" class="secondary-button">Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Login Section -->
+            <section id="loginSection" class="card">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <input type="text" id="usernameInput" placeholder="Enter username">
+                    <button id="loginBtn" class="primary-button">Login</button>
+                    <button id="guestBtn" class="secondary-button">Continue as Guest</button>
+                </div>
+            </section>
+
+            <!-- Search Section -->
+            <section id="searchSection" class="card hidden">
+                <div class="search-container">
+                    <div class="form-group">
+                        <label for="tabletName">Search by Name:</label>
+                        <div class="search-input-group">
+                            <input type="text" id="tabletName" placeholder="Enter tablet name">
+                            <button id="searchBtn" class="primary-button">Search</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tabletImage">Search by Image:</label>
+                        <div class="file-input-group">
+                            <input type="file" id="tabletImage" accept="image/*">
+                            <button id="uploadBtn" class="primary-button">Upload & Search</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview Section -->
+                <div id="imagePreview" class="hidden">
+                    <h3>Uploaded Image:</h3>
+                    <img id="previewImg" src="" alt="Tablet preview">
+                </div>
+
+                <!-- Results Section -->
+                <div id="resultsSection" class="hidden">
+                    <h3>Tablet Information</h3>
+                    <div id="tabletDetails" class="details-container"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
